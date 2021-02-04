@@ -5,14 +5,14 @@
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,600" rel="stylesheet" type="text/css">
         <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
         <link type="text/css" rel="stylesheet" href="style.css">
-        <title>Budget Project</title>
+        <title>Budgety</title>
     </head>
     <body>
         
         <div class="top">
             <div class="budget">
                 <div class="budget__title">
-                    Available Budget in <span class="budget__title--month">25000</span>:
+                    Available Budget in <span class="budget__title--month">%Month%</span>:
                 </div>
                 
                 <div class="budget__value">+ 2,345.64</div>
@@ -62,13 +62,11 @@
                             <div class="right clearfix">
                                 <div class="item__value">+ 2,100.00</div>
                                 <div class="item__delete">
-
                                     <button class="item__delete--btn">
-                                        <i class="ion-ios-close-outline"></i>           // if we do e.target it points to this but we want
-                                    </button>                                           // it to point to top parent so we need to do DOM traversing
-                                                                                        // so we wrote e.target.parentNode now it points to button class
-                                </div>                                                  // but we want to point to topmost div that contains class item ,clearfix
-                            </div>                                                      //  so we need to write parentNode 4 times
+                                        <i class="ion-ios-close-outline"></i>
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                         
                         <div class="item clearfix" id="income-1">
@@ -103,6 +101,7 @@
                                 </div>
                             </div>
                         </div>
+
                         <div class="item clearfix" id="expense-1">
                             <div class="item__description">Grocery shopping</div>
                             <div class="right clearfix">
